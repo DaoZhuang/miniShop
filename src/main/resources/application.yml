@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://43.226.43.165:3306/ssgdb2?useUnicode=true&characterEncoding=utf8
+    username: mysql180608321f
+    password: 321f50X1ae
+    driver-class-name: com.mysql.cj.jdbc.Driver
