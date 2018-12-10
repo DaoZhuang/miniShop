@@ -23,4 +23,12 @@ public class IndexController {
         mv.setViewName("index2");
         return mv;
     }
+
+    @RequestMapping("test3")
+    public ModelAndView index3(){
+        System.out.println("请求成功！！！");
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("index2");
+        return mv;
+    }
 }
