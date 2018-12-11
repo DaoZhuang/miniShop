@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<#include "./head.ftl">
+<#include "head.ftl">
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
 <#--边栏sidebar-->
-<#include "./nav.ftl">
+<#include "nav.ftl">
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
