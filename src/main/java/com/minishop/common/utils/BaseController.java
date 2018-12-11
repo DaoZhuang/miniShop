@@ -15,7 +15,8 @@ import java.net.URLEncoder;
  * base controller ,所有的controller必须继承这个controller
  * 1.getPageData（）:将前台传过来的参数封装到PageData 中，参数的接收请直接使用此方法；
  * 2.getModelAndView（）：返回ModelAndView
- * 3.
+ * 3.refreshCookie()：设置cookie 编码
+ * 4.getCookieValue（）:得到cookie值
  */
 public class BaseController {
 
