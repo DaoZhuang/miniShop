@@ -1,6 +1,8 @@
 package com.minishop.admin;
 
 import com.minishop.common.mapper.AdminIndexMapper;
+import com.minishop.common.service.AdminIndexServic;
+import com.minishop.common.utils.BaseController;
 import com.minishop.common.utils.PageData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,18 +17,17 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("index")
-public class IndexController {
+public class IndexController extends BaseController {
 
     @Autowired
-    private AdminIndexMapper adminIndexMapper;
+    private AdminIndexServic servic;
 
     @GetMapping("test")
     public ModelAndView index(){
-        System.out.println("请求成功！！！");
-        ModelAndView mv = new ModelAndView();
-
-        List<Map<String, Object>> list = adminIndexMapper.getIndex(new PageData());
-        mv.addObject("map",list);
+        PageData pd = this.getPageData();
+        ModelAndView mv = this.getModelAndView();
+        Map<String,Object> map = servic.getList(pd);
+        mv.addObject("menu",map);
         mv.setViewName("admin/common/index");
         return mv;
     }

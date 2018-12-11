@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.minishop.common.mapper.AdminIndexMapper">
-    <select id="getIndex" parameterType="com.minishop.common.utils.PageData" resultType="map">
-        select * from sys_menu
+    <select id="getHead" parameterType="com.minishop.common.utils.PageData" resultType="map">
+        select `MENU_ID`,`MENU_NAME`,`MENU_URL`,`PARENT_ID`,`MENU_ORDER` from sys_menu where PARENT_ID = "0"
+    </select>
+    <select id="getNav" parameterType="com.minishop.common.utils.PageData" resultType="map">
+        SELECT a.*
+        FROM sys_menu a LEFT JOIN sys_menu b ON a.PARENT_ID = b.MENU_ID WHERE
+        b.PARENT_ID = #{PARENT_ID} OR a.PARENT_ID = #{PARENT_ID}
     </select>
 </mapper>
