@@ -1,31 +1,25 @@
 package com.minishop.admin;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-@Controller
+@RestController
 @RequestMapping("index")
 public class IndexController {
 
-    @RequestMapping("test")
+    @GetMapping("test")
     public ModelAndView index(){
         System.out.println("请求成功！！！");
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("index");
+        mv.setViewName("common/index");
         return mv;
     }
 
-    @RequestMapping("test2")
+    @GetMapping("test2")
     public ModelAndView index2(){
-        System.out.println("请求成功！！！");
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("index2");
-        return mv;
-    }
-
-    @RequestMapping("test3")
-    public ModelAndView index3(){
         System.out.println("请求成功！！！");
         ModelAndView mv = new ModelAndView();
         mv.setViewName("index2");
