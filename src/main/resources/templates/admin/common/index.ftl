@@ -7,8 +7,14 @@
 <#include "nav.ftl">
 
     <div class="layui-body">
-        <!-- 内容主体区域 -->
+        <#list map as item>
+            ${item.MENU_NAME}<br/>
+        </#list>
+
+
+        <!-- 内容主体区域
         <iframe name="mainFrame" id="mainFrame" frameborder="0" src="http://localhost:8080/index/test2" style="margin:0 auto;width:100%;height:100%;"></iframe>
+    -->
     </div>
 
 </div>
