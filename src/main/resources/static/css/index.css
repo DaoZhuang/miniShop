@@ -1,0 +1,24 @@
+.layui-header{
+    height: 50px;
+}
+.layui-layout-admin .layui-logo{
+    line-height: 50px;
+}
+.layui-nav .layui-nav-item{
+    line-height: 50px;
+}
+.layui-layout-admin .layui-side{
+    top: 50px;
+    width: 180px;
+}
+.layui-layout-admin .layui-body{
+    top: 50px;
+    bottom: 0px;
+}
+.layui-body{
+    left: 190px;
+    overflow-y: hidden;
+}
+.layui-nav-tree{
+    width: 180px;
+}

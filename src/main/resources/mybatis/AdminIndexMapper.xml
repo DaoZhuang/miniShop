@@ -7,6 +7,6 @@
     <select id="getNav" parameterType="com.minishop.common.utils.PageData" resultType="map">
         SELECT a.*
         FROM sys_menu a LEFT JOIN sys_menu b ON a.PARENT_ID = b.MENU_ID WHERE
-        b.PARENT_ID = #{PARENT_ID} OR a.PARENT_ID = #{PARENT_ID}
+        b.PARENT_ID = #{index} OR a.PARENT_ID = #{index}
     </select>
 </mapper>

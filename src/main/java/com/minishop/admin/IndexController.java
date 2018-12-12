@@ -16,13 +16,13 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("index")
+@RequestMapping("main")
 public class IndexController extends BaseController {
 
     @Autowired
     private AdminIndexServic servic;
 
-    @GetMapping("test")
+    @GetMapping("index")
     public ModelAndView index(){
         PageData pd = this.getPageData();
         ModelAndView mv = this.getModelAndView();
