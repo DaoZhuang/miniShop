@@ -29,6 +29,7 @@ public class IndexController extends BaseController {
         Map<String,Object> map = servic.getList(pd);
         mv.addObject("menu",map);
         mv.setViewName("admin/common/index");
+
         return mv;
     }
 
