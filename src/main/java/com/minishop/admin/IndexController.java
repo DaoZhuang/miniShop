@@ -37,7 +37,7 @@ public class IndexController extends BaseController {
     public ModelAndView index2(){
         System.out.println("请求成功！！！");
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("index2");
+        mv.setViewName("admin/common/login");
         return mv;
     }
 
