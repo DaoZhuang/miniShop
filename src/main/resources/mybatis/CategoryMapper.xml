@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.minishop.common.mapper.CategoryMapper">
+    <select id="getCount" parameterType="com.minishop.common.utils.PageData" resultType="Integer">
+      SELECT COUNT(*) FROM product_cat WHERE parent_id = '0'
+    </select>
+    <select id="getList" parameterType="com.minishop.common.utils.PageData" resultType="map">
+      SELECT `cat_id`,`parent_id`,`cat_name`,`disabled`,`p_order`,`up_time`,`icon_image`
+      FROM product_cat WHERE `parent_id` = '0' LIMIT #{startIndex},#{limit}
+    </select>
+</mapper>

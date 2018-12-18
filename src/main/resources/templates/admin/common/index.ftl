@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <#include "head.ftl">
+<link rel="stylesheet" href="/css/index.css">
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
 <#--边栏sidebar-->
